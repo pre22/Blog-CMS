@@ -10,7 +10,7 @@ interests = (
     ('Thigh', 'Thigh'),
 )
 class CustomUser(AbstractUser):
-    interest = models.CharField(choice=interests)
+    interest = models.CharField(max_length=30, choices=interests)
     is_teacher = models.BooleanField('Teacher', default=False)
     is_student = models.BooleanField('Student', default=False)
 
